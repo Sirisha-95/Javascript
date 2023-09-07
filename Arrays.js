@@ -17,7 +17,7 @@ const tips=[];
 const totals = [];
 let tip;
 for(let i=0; i<bills.length; i++){
-    tip= calcTip(bills[i]);
+    const tip= calcTip(bills[i]); // creating a new tip variable everytime we loop it
     tips.push(tip);
     totals.push(tip+bills[i]);
 }
