@@ -1,0 +1,9 @@
+/* How to add styles to a webpage */
+
+// to select all the elements of the page , initially set margin and padding to zero.
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box; //not setting to border-box will add width and padding to be the total length of the element. With box-sizing only width attribute is considered.
+ }
+
