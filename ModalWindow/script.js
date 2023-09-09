@@ -21,3 +21,9 @@ const closeModalFn = function () {
 };
 
 closemodal.addEventListener('click', closeModalFn);
+
+//to close the modal window on click of escape button
+document.addEventListener('keydown', function (e) {
+  if (e.key == 'Escape') {
+    closeModalFn();
+  }
