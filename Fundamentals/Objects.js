@@ -24,3 +24,15 @@ const PresentDate = {
 
 console.log(PresentDate); //o/p - {currentMonth: 'September', Months: Array(3), Date: '12.09.2023', jan: 'First month'}
 console.log(PresentDate.presentMonth());//o/p- September
+
+// Loop over objects
+const objLoop = {
+    mon: { day: 1, desc: 'first week day' },
+    tues: { day: 2, desc: 'second week day' }
+}
+
+for (const [key, { day, desc }] of Object.entries(objLoop)) {
+    console.log(`${key} is ${day} - ${desc}`);
+}
+
+
