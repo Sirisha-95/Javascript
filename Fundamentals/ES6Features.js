@@ -48,3 +48,36 @@ for (const key of map2) {
 
 //convert map to array
 console.log([...map2]);//[Array(2), Array(2)] -0: (2) ['question', 'what is my name'], 1: (2) ['answer', 'Sirisha']
+
+
+//coding challenge 
+
+
+const gameEvents = new Map([
+    [17, '⚽️ GOAL'],
+    [36, '🔁 Substitution'],
+    [47, '⚽️ GOAL'],
+    [61, '🔁 Substitution'],
+    [64, '🔶 Yellow card'],
+    [69, '🔴 Red card'],
+    [70, '🔁 Substitution'],
+    [72, '🔁 Substitution'],
+    [76, '⚽️ GOAL'],
+    [80, '⚽️ GOAL'],
+    [92, '🔶 Yellow card'],
+]);
+
+// 1.
+const arr = gameEvents.values();
+const events = [...new Set(arr)];
+console.log(events);//o/p {'⚽️ GOAL', '🔁 Substitution', '🔶 Yellow card', '🔴 Red card'}
+
+//2.
+gameEvents.delete(64);
+console.log(gameEvents);// remove yellow card from 64 minute
+
+//3.
+for (const [key, value] of gameEvents) {
+    const half = key <= 45 ? 'FIRST' : 'SECOND';
+    console.log(`[${half} HALF] ${key} ${value}`);
+}
