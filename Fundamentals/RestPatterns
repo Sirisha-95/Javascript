@@ -1,0 +1,25 @@
+// rest patterns , the rest parameters are always passed at the end.
+
+const Obj1 = function (y, ...sampleArr) {
+    console.log(y, ...sampleArr);//o/p - 45, 245
+
+}
+
+Obj1([1, 2, 4]);
+const x = [45, 545];
+Obj1(...x);
+
+
+//to combine 2 arrays
+const arr1 = [1,2,3,4];
+const arr2 =[5,6,7,8];
+const arr3=[...arr1, ...arr2];
+console.log(arr3); //o/p - [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+//to add new elements to existing array
+const arr4 = ['apple','mango'];
+const arr5 =[...arr4, 'pineapple'];
+console.log(arr5);  //o/p- ['apple', 'mango', 'pineapple']
+
+
