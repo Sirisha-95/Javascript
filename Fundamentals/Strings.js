@@ -21,3 +21,38 @@ for (const el of arr) {
 }
 const str4 = upperCaseArr.join(' ');
 console.log(str4);
+
+
+//coding challenge
+The input will come from a textarea inserted into the DOM (see code below), and conversion will happen when the button is pressed.
+
+THIS TEST DATA (pasted to textarea)
+underscore_case
+ first_name
+Some_Variable 
+  calculate_AGE
+delayed_departure
+
+SHOULD PRODUCE THIS OUTPUT (5 separate console.log outputs)
+underscoreCase      ✅
+firstName           ✅✅
+someVariable        ✅✅✅
+calculateAge        ✅✅✅✅
+delayedDeparture    ✅✅✅✅✅
+
+const strInput = 'underscore_case first_name Some_Variable calculate_AGE delayed_departure';
+
+const arrOp = [];
+let i = 0;
+for (const el of strInput.split(' ')) {
+
+    const [first, second] = el.toLowerCase().trim().split('_');
+
+    const output = `${first}${second.replace(
+        second[0],
+        second[0].toUpperCase()
+    )}`;
+    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+    i += 1;
+}
+i = 0;
