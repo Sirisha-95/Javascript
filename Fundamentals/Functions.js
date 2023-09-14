@@ -42,3 +42,53 @@ document.body.addEventListener('click', clickedAction);
 
 // callback function used in arrays
 ['element1', 'element2', 'element3'].forEach(clickedAction);
+
+
+//functions return other functions
+const mainFn = function (param1) {
+    return function (param2) {
+        console.log(`${param1}, ${param2}`);
+    }
+}
+
+const mainCall = mainFn('param1');
+mainCall('param2');
+
+mainFn('param1')('param2');
+
+
+//call and apply methods in JS to explicity define the this keyword in the function
+// both call & apply methods are same, except apply takes array as second argument.
+
+const apple = {
+    fruit: 'apples',
+    color: 'red',
+    cost: '20',
+    calPrice: function (quantity) {
+        return console.log(`${this.color} ${this.fruit} cost ${quantity * this.cost} `);
+    }
+}
+
+const price = apple.calPrice;
+
+const mango = {
+    fruit: 'mangoes',
+    color: 'yellow',
+    cost: '30'
+}
+
+const orange = {
+    fruit: 'oranges',
+    color: 'orange',
+    cost: '40'
+}
+
+//using call method to pass the this object to be used in the function
+price.call(mango, 5);
+
+//using apply
+const count = [10];
+price.apply(orange, count);
+
+//In modern JS apply method is not used instead call is used with spread operator as follows
+price.call(apple, ...count);
