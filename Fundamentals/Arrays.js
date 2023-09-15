@@ -122,4 +122,7 @@ const maxAmntVal = amounts.reduce((acc, elem) => {
 }, amounts[0]);
 console.log(maxAmntVal); //o/p -3500
 
+//chaining of all the methods 
+const accMovements = movements.filter((mov) => mov > 0).map((mov) => mov * 2).reduce((acc, mov) => acc + mov, 0);
+console.log(accMovements);
 
