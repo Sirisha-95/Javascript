@@ -92,3 +92,33 @@ price.apply(orange, count);
 
 //In modern JS apply method is not used instead call is used with spread operator as follows
 price.call(apple, ...count);
+
+
+
+//bind method
+const bind1 = price.bind(orange);
+bind1(5);
+const bind2 = price.bind(mango, 20);//partial application as the parameters are pre defined
+bind2();
+
+//using bind basically returns a new function
+
+
+
+//used for partial application
+const addTax = (rate, value) => { return value + value * rate; }
+const addVAT = addTax.bind(null, 0.23); //here a new function is returned because of bind function
+
+console.log(addVAT(100));
+
+//used on event listeners
+document.querySelector('.buy').addEventListener('click', addTax);
+
+//Equivalent function for using bind
+const addVAT1 = function (rate) {
+    return function (value) {
+        return value + value * rate;
+    }
+}
+const addVAT2 = addVAT1(0.23);
+console.log(addVAT2(100));
