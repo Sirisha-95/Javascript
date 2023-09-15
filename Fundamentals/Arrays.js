@@ -136,9 +136,19 @@ console.log(accMovements);
 
 //find method - returns the first element of the array that satisfies the condition
 const firstNegativeMov = movements.find((mov) => mov < 0);
-console.log(firstNegativeMov)
+console.log(firstNegativeMov);
 
-//find method is useful to find a particular object in array of objects based on a specific condition which is quite powerful;
+//checks for equality - returns boolean value
+const checkElemExists1 = movements.includes(450);
+console.log(checkElemExists1);
+
+//checks for condition - returns a boolean value
+const checkElemExists2 = movements.some((mov) => mov > 0);
+console.log(checkElemExists2);
+
+//if every element in the array satisfiest the condition then it returns true
+const checkElemExists3 = movements.every((mov) => mov > 0);
+console.log(checkElemExists3);
 
 // Data
 const account1 = {
@@ -171,5 +181,42 @@ const account4 = {
 
 const accounts = [account1, account2, account3, account4];
 
+//find method is useful to find a particular object in array of objects based on a specific condition which is quite powerful;
 const findMatchingAccount = accounts.find((acc) => acc.owner === 'Sarah Smith');
 console.log(findMatchingAccount); //o/p- {owner: 'Sarah Smith', movements: Array(5), interestRate: 1, pin: 4444}
+
+
+const findAccntIndex = accounts.findIndex((acc) => acc.pin === 4444);
+console.log(findAccntIndex);
+console.log(accounts.splice(findAccntIndex, 1));
+console.log(accounts); //final array 
+
+//flat and flatMap
+const nestedArr = [1, 2, [3, [4, [7, 8]]], [5, 6]];
+console.log(nestedArr.flat());//[1, 2, 3, Array(2), 5, 6]
+console.log(nestedArr.flat(3)); // number indicates the array dept, o/p- [1, 2, 3, 4, 7, 8, 5, 6]
+
+//flatMap combines flat and map method together 
+
+//sort array method - works only for strings or numbers or for mix 
+//ascending
+movements.sort((a, b) => a - b);
+console.log(movements);
+
+//descending
+movements.sort((a, b) => b - a);
+console.log(movements);
+
+
+//programmatically creating and filling arrays
+const arr1 = new Array([1, 2, 4, 5, 5]);//o/p- [1,2,4,5,5]
+
+//empty arrays
+const arr2 = new Array(4);//o/p- [0,0,0,0] // weird way in case of single parameter
+arr2.fill(4);//[4,4,4,4]
+arr2.fill(4, 2);//second param - indicates where to start filling from // [0,0,4,4]
+
+//Array from - new Addition in javascript
+const y = Array.from({ length: 7 }, () => 1); //[1,1,1,1,1,1,1]
+
+const movementsUI = Array.from(document.querySelectorAll('.movemeents_value')); //to select all the UI elements from DOM
