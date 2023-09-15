@@ -83,3 +83,43 @@ const checkDogs = function (dogsJulia, dogsKate) {
 }
 
 checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+
+
+//using map function to produce side effects
+const profile1 = {
+  owner: 'Alpa Beta'
+}
+const profile2 = {
+  owner: 'Gamma Micron'
+}
+
+const profiles = [profile1, profile2];
+
+const addUsername = function (profiles) {
+  profiles.forEach(function (profile) {
+    profile.username = profile.owner.toLowerCase().split(' ').map((elem) => elem[0]).join('');
+  })
+}
+addUsername(profiles);
+console.log(profiles);
+
+
+//filter method
+const amounts = [200, -399, 3434, -343434, 3500];
+const positiveAmnts = amounts.filter((elem) => elem > 0);
+console.log(positiveAmnts);
+
+//reduce method - callback function is different from map & filter , first parameter is accumulator, current element, index, array
+const netAmnt = amounts.reduce((accumulator, elem, i, array) => accumulator + elem, 0); //here 0 is accumulator initial value.
+console.log(netAmnt);
+
+const maxAmntVal = amounts.reduce((acc, elem) => {
+  if (acc > elem) {
+    return acc;
+  } else {
+    return elem;
+  }
+}, amounts[0]);
+console.log(maxAmntVal); //o/p -3500
+
+
