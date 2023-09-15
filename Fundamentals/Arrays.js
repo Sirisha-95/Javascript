@@ -220,3 +220,26 @@ arr2.fill(4, 2);//second param - indicates where to start filling from // [0,0,4
 const y = Array.from({ length: 7 }, () => 1); //[1,1,1,1,1,1,1]
 
 const movementsUI = Array.from(document.querySelectorAll('.movemeents_value')); //to select all the UI elements from DOM
+
+
+//using accumulator other than primitive in reduce method 
+const { desposits, withdrawals } = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((sums, cur) => {
+    sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
+    return sums;
+  }, { desposits: 0, withdrawals: 0 });
+
+console.log(desposits, withdrawals);
+
+// convert a string to title case
+const convertTitleCase = function (title) {
+  const exceptions = ['a', 'the', 'an', 'and'];//a good practice to create an exception array for the words that should not be converted to title case
+  const titleCase = title.toLowerCase().split(' ').map((elem) => {
+    if (!exceptions.includes(elem)) {
+      return elem[0].slice(0).toUpperCase() + elem.slice(1);
+    } else return elem;
+  }).join(' ');
+  console.log(titleCase);
+}
+convertTitleCase('This is a example of converting to Title case');
