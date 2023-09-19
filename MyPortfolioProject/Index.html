@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>My Portfolio</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <img src="img/logo.png" alt="Profile logo" class="nav__logo" id="logo" />
+      <ul class="nav__links">
+        <li class="nav__item">
+          <a class="nav__link" href="#section--1">My Profile</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#section--2">Work Experience</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#section--3">Qualifications</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--btn btn--show-modal" href="#">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__title">
+      <h1>
+        </br>
+        </br>
+        <!-- Green highlight effect -->
+        <span class="highlight">Hi,</span>
+
+        <span class="highlight">I'm Sirisha Dronavalli</span>
+      </h1>
+      <h4></h4>
+      <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+      <img src="img/hero.png" class="header__img" alt="Minimalist bank items" />
+    </div>
+  </header>
+
+  <section class="section" id="section--1">
+    <div class="section__title">
+      <h2 class="section__description">Summary</h2>
+      <h3 class="section__header">
+        Currently working as Software Engineer
+      </h3>
+    </div>
+
+    <div class="features">
+      <img src="img/digital-lazy.jpg" data-src="img/digital.jpg" alt="Computer" class="features__img lazy-img" />
+      <div class="features__feature">
+        <div class="features__icon">
+          <svg>
+            <use xlink:href="img/icons.svg#icon-monitor"></use>
+          </svg>
+        </div>
+        <h5 class="features__header">About Me</h5>
+        <p>
+          My journey started with a strong foundation in web technologies which I have consistently build upon over the
+          years. I have hands-on experience in frontend and backend development and mobile application development.
+        </p>
+      </div>
+
+      <div class="features__feature">
+        <div class="features__icon">
+          <svg>
+            <use xlink:href="img/icons.svg#icon-trending-up"></use>
+          </svg>
+        </div>
+        <h5 class="features__header">Skills</h5>
+        <p>
+          Expertise in frontend technologies and frameworks like Javascript, Typescript, React , Angular. Familiar with
+          backend technologies such as NodeJS and Java Spring Boot.
+        </p>
+      </div>
+      <img src="img/grow-lazy.jpg" data-src="img/grow.jpg" alt="Plant" class="features__img lazy-img" />
+
+      <img src="img/card-lazy.jpg" data-src="img/card.jpg" alt="Credit card" class="features__img lazy-img" />
+      <div class="features__feature">
+        <div class="features__icon">
+          <svg>
+            <use xlink:href="img/icons.svg#icon-credit-card"></use>
+          </svg>
+        </div>
+        <h5 class="features__header">Projects</h5>
+        <p>
+          I have collaborated with cross functional Agile teams to deliver high quality solutions in diverse range of
+          products
+          in the field of Supply Chain, Retail & Asset Management and Smart Energy domains.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="section--2">
+    <div class="section__title">
+      <h2 class="section__description">Technical Skills</h2>
+
+    </div>
+
+    <div class="operations">
+      <div class="operations__tab-container">
+        <button class="btn operations__tab operations__tab--1 operations__tab--active" data-tab="1">
+          <span>01</span>Programming Languages
+        </button>
+        <button class="btn operations__tab operations__tab--2" data-tab="2">
+          <span>02</span>Tools
+        </button>
+        <button class="btn operations__tab operations__tab--3" data-tab="3">
+          <span>03</span>Additional Skills
+        </button>
+      </div>
+      <div class="operations__content operations__content--1 operations__content--active">
+        <div class="operations__icon operations__icon--1">
+          <svg>
+            <use xlink:href="img/icons.svg#icon-upload"></use>
+          </svg>
+        </div>
+        <h5 class="operations__header">
+          Programming Langugaes
+        </h5>
+        <p>
+          Javascript, Typescript
+        </p>
+      </div>
+
+      <div class="operations__content operations__content--2">
+        <div class="operations__icon operations__icon--2">
+          <svg>
+            <use xlink:href="img/icons.svg#icon-home"></use>
+          </svg>
+        </div>
+        <h5 class="operations__header">
+          Tools
+        </h5>
+        <p>
+          Docker, Jenkins
+        </p>
+      </div>
+      <div class="operations__content operations__content--3">
+        <div class="operations__icon operations__icon--3">
+          <svg>
+            <use xlink:href="img/icons.svg#icon-user-x"></use>
+          </svg>
+        </div>
+        <h5 class="operations__header">
+          No longer need your account? No problem! Close it instantly.
+        </h5>
+        <p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="section--3">
+    <div class="section__title section__title--testimonials">
+      <h2 class="section__description">Projects</h2>
+
+    </div>
+
+    <div class="slider">
+      <div class="slide slide--1">
+        <div class="testimonial">
+          <h5 class="testimonial__header"></h5>
+          <blockquote class="testimonial__text">
+            SAP Plant Maintenance
+          </blockquote>
+          <address class="testimonial__author">
+
+            <h6 class="testimonial__name">SAP Plant Maintenance</h6>
+            <p class="testimonial__location">Germany</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="slide slide--2">
+        <div class="testimonial">
+          <h5 class="testimonial__header">
+
+          </h5>
+          <blockquote class="testimonial__text">
+            SAP Plant Maintenance
+          </blockquote>
+          <address class="testimonial__author">
+
+            <h6 class="testimonial__name">Supply Chain</h6>
+            <p class="testimonial__location">India</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="slide slide--3">
+        <div class="testimonial">
+          <h5 class="testimonial__header">
+
+          </h5>
+          <blockquote class="testimonial__text">
+
+          </blockquote>
+          <address class="testimonial__author">
+
+            <h6 class="testimonial__name">Retail</h6>
+            <p class="testimonial__location">India</p>
+          </address>
+        </div>
+      </div>
+
+      <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
+        <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
+        <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
+      <button class="slider__btn slider__btn--left">&larr;</button>
+      <button class="slider__btn slider__btn--right">&rarr;</button>
+      <div class="dots"></div>
+    </div>
+  </section>
+
+  <section class="section section--sign-up">
+    <div class="section__title">
+      <h3 class="section__header">
+        Fill in your details
+      </h3>
+    </div>
+    <button class="btn btn--show-modal">Contact Me</button>
+  </section>
+
+  <footer class="footer">
+    <ul class="footer__nav">
+      <li class="footer__item">
+        <a class="footer__link" href="#">About</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Pricing</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Terms of Use</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Privacy Policy</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Careers</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Blog</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Contact Us</a>
+      </li>
+    </ul>
+    <img src="img/icon.png" alt="Logo" class="footer__logo" />
+    <p class="footer__copyright">
+      &copy; Copyright by
+      <a class="footer__link twitter-link" target="_blank" href="https://twitter.com/jonasschmedtman">Jonas
+        Schmedtmann</a>. Use for learning or your portfolio. Don't use to teach. Don't claim
+      as your own product.
+    </p>
+  </footer>
+
+  <div class="modal hidden">
+    <button class="btn--close-modal">&times;</button>
+    <h2 class="modal__header">
+      Contact me <br />
+      by providing your <span class="highlight">details</span>
+    </h2>
+    <form class="modal__form">
+      <label>First Name</label>
+      <input type="text" />
+      <label>Last Name</label>
+      <input type="text" />
+      <label>Email Address</label>
+      <input type="email" />
+      <button class="btn">Submit</button>
+    </form>
+  </div>
+  <div class="overlay hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
